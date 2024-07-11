@@ -1,0 +1,552 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 以上為reset語法 */
+main header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 3;
+  box-shadow: 3px 3px 5px #757474;
+}
+main header div.logo {
+  display: flex;
+  align-items: center;
+  margin: 0.7rem;
+  margin-left: 2rem;
+  flex: 5 1 400px;
+}
+main header div.logo img {
+  width: 5vw;
+  height: 5vw;
+}
+main header div.logo h1 {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+}
+main header nav {
+  flex: 2 1 400px;
+  margin: 1rem 0;
+}
+main header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+main header nav ul li a {
+  color: #09777d;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+main div.container h2 {
+  text-align: center;
+  font-size: 1.75rem;
+  font-weight: bold;
+  color: #d01e16;
+  margin: 2.5rem 0;
+}
+main div.container section.intro div.intro_tit {
+  background-image: url(../Pictures/pexels-troy-squillaci-1303476-2521619.jpg);
+  width: 100%;
+  min-height: 85vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+}
+main div.container section.intro div.intro_tit div.filter_blur {
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+  width: 100%;
+  min-height: 85vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+main div.container section.intro div.intro_tit div.text {
+  position: absolute;
+  top: 50vh;
+  left: 5vh;
+  color: #fff;
+  text-shadow: 0 0 10px #000;
+}
+main div.container section.intro div.intro_tit div.text h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+main div.container section.intro div.intro_tit div.text p {
+  margin: 1.5rem 0rem;
+  font-size: 1.2rem;
+  line-height: 1.8rem;
+  width: 65vw;
+}
+main div.container section.intro div.intro_pic {
+  width: 75vw;
+  margin: 0 auto;
+  margin-top: 4rem;
+  display: flex;
+  flex-wrap: wrap;
+}
+main div.container section.intro div.intro_pic h3 {
+  width: 100vw;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+}
+main div.container section.intro div.intro_pic div.pics {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1vw;
+}
+main div.container section.intro div.intro_pic div.pics div.inshadow {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 30px 15px rgba(0, 0, 0, 0.5) inset;
+  position: absolute;
+}
+main div.container section.intro div.intro_pic div.pics img {
+  width: 25vw;
+  height: 25vw;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  display: block;
+  transition: all 0.5s;
+}
+main div.container section.intro div.intro_pic div.pics p {
+  text-align: right;
+  position: absolute;
+  bottom: 1vw;
+  right: 1vw;
+  color: #fff;
+  font-size: 1.5rem;
+  opacity: 0.3;
+  line-height: 2rem;
+  transition: all 0.5s;
+}
+main div.container section.intro div.intro_pic div.pics:hover p {
+  opacity: 1;
+}
+main div.container section.intro div.intro_pic div.pics:hover img {
+  transform: scale(1.2);
+}
+main div.container section.intro div.intro_map {
+  width: 75vw;
+  height: 25vw;
+  margin: 3rem auto;
+}
+main div.container section.intro div.intro_map iframe {
+  border-radius: 1vw;
+  width: 100%;
+  height: 100%;
+}
+main div.container section.login {
+  width: 80%;
+  border-top: 4px solid rgb(207, 207, 207);
+  margin: 0 auto;
+  padding: 5rem 0rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main div.container section.login img {
+  max-width: 20vw;
+}
+main div.container section.login form {
+  display: flex;
+  flex-direction: column;
+  margin-left: 3rem;
+}
+main div.container section.login form input {
+  height: 2.5rem;
+  width: 25vh;
+  border-radius: 1.7rem;
+  border: 2px solid #09777d;
+  padding: 0rem 0.7rem;
+  box-sizing: border-box;
+  margin-top: 3vh;
+}
+main div.container section.login form input:focus {
+  outline: none;
+  border: 3px solid #d01e16;
+}
+main div.container section.login form div {
+  margin-top: 3vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+}
+main div.container section.login form div button {
+  color: #fff;
+  height: 2rem;
+  width: 4rem;
+  box-sizing: border-box;
+  background-color: #09777d;
+  border-style: none;
+  border-radius: 1rem;
+  margin-left: 0.7rem;
+  cursor: pointer;
+}
+main div.container section.card {
+  width: 80%;
+  border-top: 4px solid rgb(207, 207, 207);
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5rem 0rem;
+  box-sizing: border-box;
+}
+main div.container section.card img {
+  width: 10vw;
+}
+main div.container section.card div {
+  margin-left: 5rem;
+}
+main div.container section.card div h3 {
+  font-size: 1.5rem;
+}
+main div.container section.card div p {
+  font-size: 3rem;
+  line-height: 4rem;
+  word-break: break-all;
+}
+main footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  min-height: 10vh;
+  justify-content: space-around;
+  background-color: rgb(207, 207, 207);
+}
+main footer div.logo {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+main footer div.logo img {
+  width: 4vw;
+  height: 4vw;
+}
+main footer div.logo h1 {
+  font-size: 1.5rem;
+  margin-left: 0.3rem;
+}
+main footer nav {
+  width: 40%;
+  margin: 1rem;
+}
+main footer nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+main footer nav ul li {
+  flex-basis: 100px;
+}
+main footer nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+main footer section.links {
+  margin: 1rem 0rem;
+}
+main footer section.links a {
+  margin: 0rem 0.7rem;
+}
+main footer section.links a img {
+  width: 3vw;
+  height: 3vw;
+}
+
+@media screen and (max-width: 1024px) {
+  main div.container section.intro div.intro_tit div.text {
+    position: static;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 15rem;
+  }
+  main div.container section.intro div.intro_tit div.text h1 {
+    line-height: 3.5rem;
+  }
+  main div.container section.intro div.intro_tit div.text p {
+    margin: 0 auto;
+    margin: 1.5rem 0rem;
+    line-height: 1.8rem;
+    width: 100%;
+  }
+  main div.container section.intro div.intro_pic {
+    width: 90vw;
+  }
+  main div.container section.intro div.intro_pic div.pics p {
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    font-size: 1.2rem;
+  }
+  main div.container section.intro div.intro_pic div.pics img {
+    width: 30vw;
+    height: 30vw;
+  }
+  main div.container section.intro div.intro_map {
+    width: 90vw;
+    height: 30vw;
+  }
+  main div.container section.login {
+    padding: 3rem 0rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  main div.container section.login img {
+    max-width: 30vw;
+  }
+  main div.container section.login form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0rem;
+  }
+  main div.container section.login form input {
+    height: 2.5rem;
+    width: 30vw;
+    margin-top: 2vw;
+  }
+  main div.container section.login form div {
+    margin-top: 3vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  main div.container section.card img {
+    width: 20vw;
+  }
+  main footer {
+    flex-direction: column;
+    min-height: 25vh;
+  }
+  main footer div.logo img {
+    width: 6vw;
+    height: 6vw;
+  }
+  main footer div.logo h1 {
+    font-size: 2rem;
+  }
+  main footer section.links {
+    margin-top: 1rem;
+  }
+  main footer section.links a img {
+    width: 5vw;
+    height: 5vw;
+  }
+}
+@media screen and (max-width: 550px) {
+  main header div.logo {
+    margin-left: 1rem;
+  }
+  main header div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  main header nav {
+    margin: 0.5rem 0 1rem 0;
+  }
+  main header nav ul li a {
+    color: #09777d;
+    text-decoration: none;
+    font-size: 1.35rem;
+  }
+  main div.container section.intro div.intro_tit div.text {
+    position: static;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 8rem;
+  }
+  main div.container section.intro div.intro_tit div.text h1 {
+    line-height: 3.5rem;
+  }
+  main div.container section.intro div.intro_tit div.text p {
+    margin: 0 auto;
+    margin: 1.5rem 0rem;
+    line-height: 1.8rem;
+    width: 100%;
+  }
+  main div.container section.intro div.intro_pic {
+    width: 90vw;
+    margin: 3rem auto;
+  }
+  main div.container section.intro div.intro_pic h3 {
+    line-height: 3rem;
+  }
+  main div.container section.intro div.intro_pic div.pics {
+    position: relative;
+    border-radius: 5vw;
+  }
+  main div.container section.intro div.intro_pic div.pics img {
+    width: 90vw;
+    height: 45vw;
+  }
+  main div.container section.intro div.intro_pic div.pics p {
+    position: absolute;
+    bottom: 2vw;
+    right: 2vw;
+    font-size: 1.5rem;
+  }
+  main div.container section.intro div.intro_map {
+    width: 90vw;
+    height: 60vw;
+  }
+  main div.container section.intro div.intro_map iframe {
+    border-radius: 2vw;
+  }
+  main div.container section.login {
+    padding: 3rem 0rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+  }
+  main div.container section.login img {
+    max-width: 40vw;
+  }
+  main div.container section.login form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0rem;
+  }
+  main div.container section.login form input {
+    height: 2.3rem;
+    width: 50vw;
+    margin-top: 2vh;
+  }
+  main div.container section.login form div {
+    margin-top: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+  main div.container section.card {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem 0rem;
+    box-sizing: border-box;
+  }
+  main div.container section.card img {
+    width: 25vw;
+    margin-bottom: 1rem;
+  }
+  main div.container section.card div {
+    text-align: center;
+    margin-left: 0rem;
+  }
+  main div.container section.card div h3 {
+    font-size: 1.5rem;
+  }
+  main div.container section.card div p {
+    font-size: 1.75rem;
+    line-height: 3rem;
+  }
+  main footer {
+    flex-direction: column;
+    min-height: 25vh;
+  }
+  main footer div.logo img {
+    width: 10vw;
+    height: 10vw;
+  }
+  main footer div.logo h1 {
+    font-size: 2rem;
+  }
+  main footer section.links {
+    margin-top: 1rem;
+  }
+  main footer section.links a img {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #09777d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}/*# sourceMappingURL=styles01.css.map */

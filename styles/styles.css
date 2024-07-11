@@ -1,0 +1,322 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer,
+header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* 以上為reset語法 */
+main header {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  z-index: 3;
+  box-shadow: 3px 3px 5px #757474;
+}
+main header div.logo {
+  display: flex;
+  align-items: center;
+  margin: 0.7rem;
+  margin-left: 2rem;
+  flex: 5 1 400px;
+}
+main header div.logo img {
+  width: 5vw;
+  height: 5vw;
+}
+main header div.logo h1 {
+  margin-left: 0.5rem;
+  font-size: 2rem;
+}
+main header nav {
+  flex: 2 1 400px;
+  margin: 1rem 0;
+}
+main header nav ul {
+  display: flex;
+  justify-content: space-around;
+}
+main header nav ul li a {
+  color: #09777d;
+  text-decoration: none;
+  font-size: 1.35rem;
+}
+main div.container section.backImage {
+  background-image: url(../Pictures/pexels-photo-416676.jpeg);
+  width: 100%;
+  min-height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+main div.container section.backImage div.filter {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100%;
+  min-height: 90vh;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+}
+main div.container section.backImage h3 {
+  font-size: 3.5rem;
+  color: #FFF;
+  line-height: 5rem;
+}
+main div.container section.backImage button.start {
+  background-color: #3bf0e5;
+  padding: 0.75rem 1.5rem;
+  font-size: 1.5rem;
+  color: #FFF;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  margin-top: 2rem;
+}
+main div.container section.second {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main div.container section.second h2 {
+  font-size: 2rem;
+  margin: 2rem 0rem;
+  line-height: 3rem;
+}
+main div.container section.second section.cards {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  min-height: 80vh;
+}
+main div.container section.second section.cards div.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem;
+  flex: 1 1 300px;
+}
+main div.container section.second section.cards div.card div.image-container {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+main div.container section.second section.cards div.card div.image-container img {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+main div.container section.second section.cards div.card div.image-container img:hover {
+  transform: scale(1.2);
+}
+main div.container section.second section.cards div.card h4 {
+  font-size: 2rem;
+  margin: 1rem 0;
+}
+main div.container section.second section.cards div.card p {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+  margin: 1rem 0;
+}
+main div.container section.second section.cards div.card a {
+  text-decoration: none;
+  padding: 1rem 1.5rem;
+  background-color: #09777d;
+  color: #FFF;
+  font-size: 1.25rem;
+  margin: 1rem 0;
+}
+main footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 25vh;
+  justify-content: space-around;
+  background-color: rgb(207, 207, 207);
+}
+main footer div.logo {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+}
+main footer div.logo img {
+  width: 6vw;
+  height: 6vw;
+}
+main footer div.logo h1 {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+main footer nav {
+  width: 30%;
+  margin: 1rem 0rem;
+}
+main footer nav ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  flex-wrap: wrap;
+}
+main footer nav ul li {
+  flex-basis: 100px;
+}
+main footer nav ul li a {
+  color: #000;
+  text-decoration: none;
+  font-size: 1.35rem;
+  font-weight: 500;
+  line-height: 2rem;
+}
+main footer section.links {
+  margin: 1rem 0rem;
+}
+main footer section.links a {
+  margin: 0rem 1rem;
+}
+main footer section.links a img {
+  width: 5vw;
+  height: 5vw;
+}
+
+@media screen and (max-width: 550px) {
+  main header div.logo {
+    margin-left: 1rem;
+  }
+  main header div.logo img {
+    width: 15vw;
+    height: 15vw;
+  }
+  main header nav {
+    margin: 0.5rem 0 1rem 0;
+  }
+  main header nav ul li a {
+    color: #09777d;
+    text-decoration: none;
+    font-size: 1.35rem;
+  }
+  main div.container section.second section.cards div.card div.image-container {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  main div.container section.second section.cards div.card div.image-container img {
+    width: 30vw;
+    height: 30vw;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  main div.container section.second section.cards div.card div.image-container img:hover {
+    transform: scale(1.2);
+  }
+  main footer div.logo img {
+    width: 10vw;
+    height: 10vw;
+  }
+  main footer section.links {
+    margin-top: 1rem;
+  }
+  main footer section.links a img {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+@media screen and (max-width: 700px) {
+  main div.container section.backImage h3 {
+    margin: 0rem 1rem;
+    font-size: 2.5rem;
+    color: #FFF;
+    line-height: 3.5rem;
+  }
+  main div.container section.backImage button.start {
+    margin-top: 1rem;
+  }
+  main div.container section.second section.cards div.card img {
+    width: 40vw;
+    height: 40vw;
+  }
+}
+/* scrollbar */
+/* width */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #09777d;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #888;
+}/*# sourceMappingURL=styles.css.map */
